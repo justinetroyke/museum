@@ -19,4 +19,14 @@ class PatronTest < Minitest::Test
 
     assert_equal [], bob.interests
   end
+
+  def test_you_can_add_intersts
+    bob = Patron.new("Bob")
+    bob.add_interest("Dead Sea Scrolls")
+    bob.add_interest("Gems and Minerals")
+
+    assert_equal ["Dead Sea Scrolls", "Gems and Minerals"], bob.interests
+  end
+
+  def test_
 end
